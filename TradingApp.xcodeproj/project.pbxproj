@@ -1,0 +1,781 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4BAE0F872CEC704500921592 /* StockNameAndStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0F862CEC704500921592 /* StockNameAndStatusView.swift */; };
+		4BAE0F8B2CEC885F00921592 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 4BAE0F8A2CEC885F00921592 /* Localizable.xcstrings */; };
+		4BAE0F8E2CECAF9B00921592 /* HoldingsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0F8D2CECAF9B00921592 /* HoldingsRepository.swift */; };
+		4BAE0F912CECB00600921592 /* HoldingRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0F902CECB00600921592 /* HoldingRepositoryProtocol.swift */; };
+		4BAE0F932CECB14100921592 /* UserHolding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0F922CECB14100921592 /* UserHolding.swift */; };
+		4BAE0F952CECB38100921592 /* StockHoldingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0F942CECB38100921592 /* StockHoldingsViewModel.swift */; };
+		4BAE0F972CECC34F00921592 /* StockHoldingCellViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0F962CECC34F00921592 /* StockHoldingCellViewData.swift */; };
+		4BAE0F9A2CECC38E00921592 /* PortfolioSummaryViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0F992CECC38E00921592 /* PortfolioSummaryViewData.swift */; };
+		4BAE0F9D2CECC42500921592 /* StockHoldingDataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0F9C2CECC42500921592 /* StockHoldingDataTransformer.swift */; };
+		4BAE0FA02CECCA2400921592 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0F9F2CECCA2400921592 /* APIError.swift */; };
+		4BAE0FA22CECCA6D00921592 /* HTTPClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0FA12CECCA6D00921592 /* HTTPClientProtocol.swift */; };
+		4BAE0FA42CECCBD500921592 /* URLSessionHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0FA32CECCBD500921592 /* URLSessionHttpClient.swift */; };
+		4BAE0FA62CECD01800921592 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0FA52CECD01800921592 /* NetworkManager.swift */; };
+		4BAE0FA82CECD8D100921592 /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0FA72CECD8D100921592 /* DataDecoder.swift */; };
+		4BAE0FAA2CED0DE500921592 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0FA92CED0DE500921592 /* CacheManager.swift */; };
+		4BAE0FB42CED12C900921592 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0FB32CED12C900921592 /* NetworkManagerTests.swift */; };
+		4BAE0FBC2CED140400921592 /* MockHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0FBB2CED140400921592 /* MockHTTPClient.swift */; };
+		4BAE0FBE2CED144600921592 /* MockNetworkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0FBD2CED144600921592 /* MockNetworkStore.swift */; };
+		4BAE0FC42CED17B600921592 /* StocksHoldingDataTransformerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0FC32CED17B600921592 /* StocksHoldingDataTransformerTest.swift */; };
+		4BAE0FC62CED1CD800921592 /* StockHoldingsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0FC52CED1CD800921592 /* StockHoldingsViewModelTest.swift */; };
+		4BAE0FCA2CED1E2B00921592 /* StockHoldings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAE0FC92CED1E2B00921592 /* StockHoldings.swift */; };
+		4BD7F2E82CE9069100EC58E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7F2E72CE9069100EC58E1 /* AppDelegate.swift */; };
+		4BD7F2EA2CE9069100EC58E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7F2E92CE9069100EC58E1 /* SceneDelegate.swift */; };
+		4BD7F2EC2CE9069100EC58E1 /* StocksHoldingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7F2EB2CE9069100EC58E1 /* StocksHoldingViewController.swift */; };
+		4BD7F2EF2CE9069100EC58E1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4BD7F2EE2CE9069100EC58E1 /* Base */; };
+		4BD7F2F12CE9069300EC58E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD7F2F02CE9069300EC58E1 /* Assets.xcassets */; };
+		4BD7F2F42CE9069300EC58E1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4BD7F2F32CE9069300EC58E1 /* Base */; };
+		4BD7F3072CEC569200EC58E1 /* PortfolioSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7F3062CEC569200EC58E1 /* PortfolioSummaryView.swift */; };
+		4BD7F3092CEC570B00EC58E1 /* PortfolioSummarySubTypeOneLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7F3082CEC570B00EC58E1 /* PortfolioSummarySubTypeOneLabelView.swift */; };
+		4BD7F30C2CEC577D00EC58E1 /* PortfolioSummarySubTypeTwoLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7F30B2CEC577D00EC58E1 /* PortfolioSummarySubTypeTwoLabelView.swift */; };
+		4BD7F30F2CEC582A00EC58E1 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7F30E2CEC582A00EC58E1 /* DividerView.swift */; };
+		4BD7F3112CEC588200EC58E1 /* UXUitiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7F3102CEC588200EC58E1 /* UXUitiles.swift */; };
+		4BD7F3132CEC58BD00EC58E1 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7F3122CEC58BD00EC58E1 /* HelperExtensions.swift */; };
+		4BD7F3162CEC595E00EC58E1 /* StockHoldinglTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7F3152CEC595E00EC58E1 /* StockHoldinglTableViewCell.swift */; };
+		4BD7F3182CEC59B800EC58E1 /* StockValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7F3172CEC59B800EC58E1 /* StockValueView.swift */; };
+		4BD7F31C2CEC5A1C00EC58E1 /* StockQuantityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7F31B2CEC5A1C00EC58E1 /* StockQuantityView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4BAE0FB52CED12C900921592 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BD7F2DC2CE9069000EC58E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BD7F2E32CE9069000EC58E1;
+			remoteInfo = TradingApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4BAE0F862CEC704500921592 /* StockNameAndStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockNameAndStatusView.swift; sourceTree = "<group>"; };
+		4BAE0F8A2CEC885F00921592 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		4BAE0F8D2CECAF9B00921592 /* HoldingsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingsRepository.swift; sourceTree = "<group>"; };
+		4BAE0F902CECB00600921592 /* HoldingRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingRepositoryProtocol.swift; sourceTree = "<group>"; };
+		4BAE0F922CECB14100921592 /* UserHolding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHolding.swift; sourceTree = "<group>"; };
+		4BAE0F942CECB38100921592 /* StockHoldingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockHoldingsViewModel.swift; sourceTree = "<group>"; };
+		4BAE0F962CECC34F00921592 /* StockHoldingCellViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockHoldingCellViewData.swift; sourceTree = "<group>"; };
+		4BAE0F992CECC38E00921592 /* PortfolioSummaryViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioSummaryViewData.swift; sourceTree = "<group>"; };
+		4BAE0F9C2CECC42500921592 /* StockHoldingDataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockHoldingDataTransformer.swift; sourceTree = "<group>"; };
+		4BAE0F9F2CECCA2400921592 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		4BAE0FA12CECCA6D00921592 /* HTTPClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientProtocol.swift; sourceTree = "<group>"; };
+		4BAE0FA32CECCBD500921592 /* URLSessionHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHttpClient.swift; sourceTree = "<group>"; };
+		4BAE0FA52CECD01800921592 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4BAE0FA72CECD8D100921592 /* DataDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
+		4BAE0FA92CED0DE500921592 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		4BAE0FB12CED12C900921592 /* TradingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BAE0FB32CED12C900921592 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		4BAE0FBB2CED140400921592 /* MockHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHTTPClient.swift; sourceTree = "<group>"; };
+		4BAE0FBD2CED144600921592 /* MockNetworkStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkStore.swift; sourceTree = "<group>"; };
+		4BAE0FC32CED17B600921592 /* StocksHoldingDataTransformerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksHoldingDataTransformerTest.swift; sourceTree = "<group>"; };
+		4BAE0FC52CED1CD800921592 /* StockHoldingsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockHoldingsViewModelTest.swift; sourceTree = "<group>"; };
+		4BAE0FC92CED1E2B00921592 /* StockHoldings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockHoldings.swift; sourceTree = "<group>"; };
+		4BD7F2E42CE9069000EC58E1 /* TradingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BD7F2E72CE9069100EC58E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4BD7F2E92CE9069100EC58E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4BD7F2EB2CE9069100EC58E1 /* StocksHoldingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksHoldingViewController.swift; sourceTree = "<group>"; };
+		4BD7F2EE2CE9069100EC58E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4BD7F2F02CE9069300EC58E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4BD7F2F32CE9069300EC58E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4BD7F2F52CE9069300EC58E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BD7F3062CEC569200EC58E1 /* PortfolioSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioSummaryView.swift; sourceTree = "<group>"; };
+		4BD7F3082CEC570B00EC58E1 /* PortfolioSummarySubTypeOneLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioSummarySubTypeOneLabelView.swift; sourceTree = "<group>"; };
+		4BD7F30B2CEC577D00EC58E1 /* PortfolioSummarySubTypeTwoLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioSummarySubTypeTwoLabelView.swift; sourceTree = "<group>"; };
+		4BD7F30E2CEC582A00EC58E1 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		4BD7F3102CEC588200EC58E1 /* UXUitiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UXUitiles.swift; sourceTree = "<group>"; };
+		4BD7F3122CEC58BD00EC58E1 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
+		4BD7F3152CEC595E00EC58E1 /* StockHoldinglTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockHoldinglTableViewCell.swift; sourceTree = "<group>"; };
+		4BD7F3172CEC59B800EC58E1 /* StockValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockValueView.swift; sourceTree = "<group>"; };
+		4BD7F31B2CEC5A1C00EC58E1 /* StockQuantityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockQuantityView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4BAE0FAE2CED12C900921592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BD7F2E12CE9069000EC58E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4BAE0F8C2CECACC100921592 /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				4BD7F2FB2CEC54D800EC58E1 /* Holdings */,
+				4BD7F2FC2CEC54F500EC58E1 /* Positions */,
+			);
+			path = Portfolio;
+			sourceTree = "<group>";
+		};
+		4BAE0F8F2CECAFE700921592 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE0F8D2CECAF9B00921592 /* HoldingsRepository.swift */,
+				4BAE0F902CECB00600921592 /* HoldingRepositoryProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		4BAE0F982CECC35800921592 /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE0F962CECC34F00921592 /* StockHoldingCellViewData.swift */,
+				4BAE0F992CECC38E00921592 /* PortfolioSummaryViewData.swift */,
+			);
+			path = ViewData;
+			sourceTree = "<group>";
+		};
+		4BAE0F9B2CECC3C400921592 /* Transformer */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE0F9C2CECC42500921592 /* StockHoldingDataTransformer.swift */,
+			);
+			path = Transformer;
+			sourceTree = "<group>";
+		};
+		4BAE0F9E2CECCA1400921592 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE0F9F2CECCA2400921592 /* APIError.swift */,
+				4BAE0FA12CECCA6D00921592 /* HTTPClientProtocol.swift */,
+				4BAE0FA32CECCBD500921592 /* URLSessionHttpClient.swift */,
+				4BAE0FA52CECD01800921592 /* NetworkManager.swift */,
+				4BAE0FA72CECD8D100921592 /* DataDecoder.swift */,
+				4BAE0FA92CED0DE500921592 /* CacheManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4BAE0FB22CED12C900921592 /* TradingAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE0FC72CED1DF100921592 /* ViewModelTests */,
+				4BAE0FC02CED177100921592 /* TransformerTests */,
+				4BAE0FBF2CED175E00921592 /* CoreTests */,
+				4BAE0FBA2CED13E100921592 /* MockHelpers */,
+			);
+			path = TradingAppTests;
+			sourceTree = "<group>";
+		};
+		4BAE0FBA2CED13E100921592 /* MockHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE0FBB2CED140400921592 /* MockHTTPClient.swift */,
+				4BAE0FBD2CED144600921592 /* MockNetworkStore.swift */,
+			);
+			path = MockHelpers;
+			sourceTree = "<group>";
+		};
+		4BAE0FBF2CED175E00921592 /* CoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE0FB32CED12C900921592 /* NetworkManagerTests.swift */,
+			);
+			path = CoreTests;
+			sourceTree = "<group>";
+		};
+		4BAE0FC02CED177100921592 /* TransformerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE0FC32CED17B600921592 /* StocksHoldingDataTransformerTest.swift */,
+			);
+			path = TransformerTests;
+			sourceTree = "<group>";
+		};
+		4BAE0FC72CED1DF100921592 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE0FC82CED1E0000921592 /* Mocks */,
+				4BAE0FC52CED1CD800921592 /* StockHoldingsViewModelTest.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		4BAE0FC82CED1E0000921592 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE0FC92CED1E2B00921592 /* StockHoldings.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		4BD7F2DB2CE9069000EC58E1 = {
+			isa = PBXGroup;
+			children = (
+				4BD7F2E62CE9069100EC58E1 /* TradingApp */,
+				4BAE0FB22CED12C900921592 /* TradingAppTests */,
+				4BD7F2E52CE9069000EC58E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4BD7F2E52CE9069000EC58E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BD7F2E42CE9069000EC58E1 /* TradingApp.app */,
+				4BAE0FB12CED12C900921592 /* TradingAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BD7F2E62CE9069100EC58E1 /* TradingApp */ = {
+			isa = PBXGroup;
+			children = (
+				4BD7F2FF2CEC552F00EC58E1 /* Resources */,
+				4BD7F2FD2CEC551800EC58E1 /* Profile */,
+				4BD7F2FE2CEC552700EC58E1 /* Common */,
+				4BAE0F8C2CECACC100921592 /* Portfolio */,
+				4BD7F2F52CE9069300EC58E1 /* Info.plist */,
+			);
+			path = TradingApp;
+			sourceTree = "<group>";
+		};
+		4BD7F2FB2CEC54D800EC58E1 /* Holdings */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE0F9B2CECC3C400921592 /* Transformer */,
+				4BAE0F982CECC35800921592 /* ViewData */,
+				4BAE0F8F2CECAFE700921592 /* Repository */,
+				4BD7F3042CEC560D00EC58E1 /* View */,
+				4BD7F3022CEC55D500EC58E1 /* ViewModel */,
+				4BD7F3012CEC55D000EC58E1 /* Model */,
+				4BD7F3002CEC557E00EC58E1 /* Controller */,
+			);
+			path = Holdings;
+			sourceTree = "<group>";
+		};
+		4BD7F2FC2CEC54F500EC58E1 /* Positions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Positions;
+			sourceTree = "<group>";
+		};
+		4BD7F2FD2CEC551800EC58E1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		4BD7F2FE2CEC552700EC58E1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE0F9E2CECCA1400921592 /* Networking */,
+				4BD7F3102CEC588200EC58E1 /* UXUitiles.swift */,
+				4BD7F3122CEC58BD00EC58E1 /* HelperExtensions.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4BD7F2FF2CEC552F00EC58E1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4BD7F2ED2CE9069100EC58E1 /* Main.storyboard */,
+				4BD7F2E72CE9069100EC58E1 /* AppDelegate.swift */,
+				4BAE0F8A2CEC885F00921592 /* Localizable.xcstrings */,
+				4BD7F2F02CE9069300EC58E1 /* Assets.xcassets */,
+				4BD7F2E92CE9069100EC58E1 /* SceneDelegate.swift */,
+				4BD7F2F22CE9069300EC58E1 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4BD7F3002CEC557E00EC58E1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4BD7F2EB2CE9069100EC58E1 /* StocksHoldingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4BD7F3012CEC55D000EC58E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE0F922CECB14100921592 /* UserHolding.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4BD7F3022CEC55D500EC58E1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE0F942CECB38100921592 /* StockHoldingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4BD7F3042CEC560D00EC58E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4BD7F3142CEC593100EC58E1 /* StockHoldingCell */,
+				4BD7F30A2CEC575300EC58E1 /* Common */,
+				4BD7F3052CEC566000EC58E1 /* ProfileSummary */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BD7F3052CEC566000EC58E1 /* ProfileSummary */ = {
+			isa = PBXGroup;
+			children = (
+				4BD7F3062CEC569200EC58E1 /* PortfolioSummaryView.swift */,
+				4BD7F3082CEC570B00EC58E1 /* PortfolioSummarySubTypeOneLabelView.swift */,
+				4BD7F30B2CEC577D00EC58E1 /* PortfolioSummarySubTypeTwoLabelView.swift */,
+			);
+			path = ProfileSummary;
+			sourceTree = "<group>";
+		};
+		4BD7F30A2CEC575300EC58E1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4BD7F30E2CEC582A00EC58E1 /* DividerView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4BD7F3142CEC593100EC58E1 /* StockHoldingCell */ = {
+			isa = PBXGroup;
+			children = (
+				4BAE0F862CEC704500921592 /* StockNameAndStatusView.swift */,
+				4BD7F3152CEC595E00EC58E1 /* StockHoldinglTableViewCell.swift */,
+				4BD7F3172CEC59B800EC58E1 /* StockValueView.swift */,
+				4BD7F31B2CEC5A1C00EC58E1 /* StockQuantityView.swift */,
+			);
+			path = StockHoldingCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4BAE0FB02CED12C900921592 /* TradingAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BAE0FB72CED12C900921592 /* Build configuration list for PBXNativeTarget "TradingAppTests" */;
+			buildPhases = (
+				4BAE0FAD2CED12C900921592 /* Sources */,
+				4BAE0FAE2CED12C900921592 /* Frameworks */,
+				4BAE0FAF2CED12C900921592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BAE0FB62CED12C900921592 /* PBXTargetDependency */,
+			);
+			name = TradingAppTests;
+			productName = TradingAppTests;
+			productReference = 4BAE0FB12CED12C900921592 /* TradingAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4BD7F2E32CE9069000EC58E1 /* TradingApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BD7F2F82CE9069300EC58E1 /* Build configuration list for PBXNativeTarget "TradingApp" */;
+			buildPhases = (
+				4BD7F2E02CE9069000EC58E1 /* Sources */,
+				4BD7F2E12CE9069000EC58E1 /* Frameworks */,
+				4BD7F2E22CE9069000EC58E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TradingApp;
+			productName = TradingApp;
+			productReference = 4BD7F2E42CE9069000EC58E1 /* TradingApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4BD7F2DC2CE9069000EC58E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					4BAE0FB02CED12C900921592 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 4BD7F2E32CE9069000EC58E1;
+					};
+					4BD7F2E32CE9069000EC58E1 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 4BD7F2DF2CE9069000EC58E1 /* Build configuration list for PBXProject "TradingApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4BD7F2DB2CE9069000EC58E1;
+			productRefGroup = 4BD7F2E52CE9069000EC58E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4BD7F2E32CE9069000EC58E1 /* TradingApp */,
+				4BAE0FB02CED12C900921592 /* TradingAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4BAE0FAF2CED12C900921592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BD7F2E22CE9069000EC58E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BD7F2F12CE9069300EC58E1 /* Assets.xcassets in Resources */,
+				4BD7F2F42CE9069300EC58E1 /* Base in Resources */,
+				4BAE0F8B2CEC885F00921592 /* Localizable.xcstrings in Resources */,
+				4BD7F2EF2CE9069100EC58E1 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BAE0FAD2CED12C900921592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BAE0FCA2CED1E2B00921592 /* StockHoldings.swift in Sources */,
+				4BAE0FBC2CED140400921592 /* MockHTTPClient.swift in Sources */,
+				4BAE0FB42CED12C900921592 /* NetworkManagerTests.swift in Sources */,
+				4BAE0FC62CED1CD800921592 /* StockHoldingsViewModelTest.swift in Sources */,
+				4BAE0FC42CED17B600921592 /* StocksHoldingDataTransformerTest.swift in Sources */,
+				4BAE0FBE2CED144600921592 /* MockNetworkStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BD7F2E02CE9069000EC58E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BAE0FAA2CED0DE500921592 /* CacheManager.swift in Sources */,
+				4BAE0F952CECB38100921592 /* StockHoldingsViewModel.swift in Sources */,
+				4BAE0F932CECB14100921592 /* UserHolding.swift in Sources */,
+				4BAE0F872CEC704500921592 /* StockNameAndStatusView.swift in Sources */,
+				4BD7F31C2CEC5A1C00EC58E1 /* StockQuantityView.swift in Sources */,
+				4BAE0FA22CECCA6D00921592 /* HTTPClientProtocol.swift in Sources */,
+				4BAE0F972CECC34F00921592 /* StockHoldingCellViewData.swift in Sources */,
+				4BD7F3162CEC595E00EC58E1 /* StockHoldinglTableViewCell.swift in Sources */,
+				4BAE0F9A2CECC38E00921592 /* PortfolioSummaryViewData.swift in Sources */,
+				4BD7F2EC2CE9069100EC58E1 /* StocksHoldingViewController.swift in Sources */,
+				4BD7F3132CEC58BD00EC58E1 /* HelperExtensions.swift in Sources */,
+				4BAE0FA82CECD8D100921592 /* DataDecoder.swift in Sources */,
+				4BD7F30C2CEC577D00EC58E1 /* PortfolioSummarySubTypeTwoLabelView.swift in Sources */,
+				4BD7F30F2CEC582A00EC58E1 /* DividerView.swift in Sources */,
+				4BAE0FA62CECD01800921592 /* NetworkManager.swift in Sources */,
+				4BD7F3072CEC569200EC58E1 /* PortfolioSummaryView.swift in Sources */,
+				4BAE0F912CECB00600921592 /* HoldingRepositoryProtocol.swift in Sources */,
+				4BD7F3092CEC570B00EC58E1 /* PortfolioSummarySubTypeOneLabelView.swift in Sources */,
+				4BD7F2E82CE9069100EC58E1 /* AppDelegate.swift in Sources */,
+				4BD7F3182CEC59B800EC58E1 /* StockValueView.swift in Sources */,
+				4BD7F3112CEC588200EC58E1 /* UXUitiles.swift in Sources */,
+				4BAE0FA42CECCBD500921592 /* URLSessionHttpClient.swift in Sources */,
+				4BD7F2EA2CE9069100EC58E1 /* SceneDelegate.swift in Sources */,
+				4BAE0F9D2CECC42500921592 /* StockHoldingDataTransformer.swift in Sources */,
+				4BAE0F8E2CECAF9B00921592 /* HoldingsRepository.swift in Sources */,
+				4BAE0FA02CECCA2400921592 /* APIError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4BAE0FB62CED12C900921592 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4BD7F2E32CE9069000EC58E1 /* TradingApp */;
+			targetProxy = 4BAE0FB52CED12C900921592 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4BD7F2ED2CE9069100EC58E1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BD7F2EE2CE9069100EC58E1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4BD7F2F22CE9069300EC58E1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BD7F2F32CE9069300EC58E1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4BAE0FB82CED12C900921592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GXYPVDH6YV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "upstock-demo-app.TradingAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TradingApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TradingApp";
+			};
+			name = Debug;
+		};
+		4BAE0FB92CED12C900921592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GXYPVDH6YV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "upstock-demo-app.TradingAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TradingApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TradingApp";
+			};
+			name = Release;
+		};
+		4BD7F2F62CE9069300EC58E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4BD7F2F72CE9069300EC58E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4BD7F2F92CE9069300EC58E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GXYPVDH6YV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TradingApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "upstock-demo-app.TradingApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4BD7F2FA2CE9069300EC58E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GXYPVDH6YV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TradingApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "upstock-demo-app.TradingApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4BAE0FB72CED12C900921592 /* Build configuration list for PBXNativeTarget "TradingAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BAE0FB82CED12C900921592 /* Debug */,
+				4BAE0FB92CED12C900921592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BD7F2DF2CE9069000EC58E1 /* Build configuration list for PBXProject "TradingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BD7F2F62CE9069300EC58E1 /* Debug */,
+				4BD7F2F72CE9069300EC58E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BD7F2F82CE9069300EC58E1 /* Build configuration list for PBXNativeTarget "TradingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BD7F2F92CE9069300EC58E1 /* Debug */,
+				4BD7F2FA2CE9069300EC58E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4BD7F2DC2CE9069000EC58E1 /* Project object */;
+}
